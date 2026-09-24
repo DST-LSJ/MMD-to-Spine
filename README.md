@@ -2,6 +2,10 @@
 
 将常见MMD人物动作VMD转换成现有Spine 4.3角色骨骼动画的Python工具，附Spine测试工程。
 
+## 演示视频
+
+[点击观看：MMD 转 Spine 效果演示（哔哩哔哩）](https://www.bilibili.com/video/BV1Lkh467E6h)
+
 ## 目录
 
 ```text
