@@ -1,0 +1,15 @@
+* text=auto
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.atlas text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+*.spine binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.bmp binary
+*.webp binary
+*.vmd binary
+*.zip binary
