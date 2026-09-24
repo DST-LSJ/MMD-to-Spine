@@ -1,0 +1,227 @@
+{
+  "version": 1,
+  "name": "generic_humanoid_v1",
+  "depth_source": "generic_humanoid_fk_analytic_foot_ik",
+  "description": "Model-independent canonical humanoid in MMD units; configurable lengths, pivots and standard bone aliases. Not measured from a character model.",
+  "coordinate_system": {
+    "right": "+X",
+    "up": "+Y",
+    "forward_hint": "-Z",
+    "quaternion_order": "xyzw",
+    "transform_order": "parent_world_rotation * local_vmd_rotation"
+  },
+  "body_height": 16.0,
+  "target_bindings": {
+    "arm_F": "right",
+    "arm_B": "left",
+    "leg_F": "right",
+    "leg_B": "left"
+  },
+  "aliases": {
+    "all_parent": [
+      "全ての親"
+    ],
+    "center": [
+      "センター",
+      "Center"
+    ],
+    "groove": [
+      "グルーブ"
+    ],
+    "waist": [
+      "腰"
+    ],
+    "lower_body": [
+      "下半身"
+    ],
+    "upper_body": [
+      "上半身"
+    ],
+    "upper_body_2": [
+      "上半身2"
+    ],
+    "neck": [
+      "首"
+    ],
+    "head": [
+      "頭"
+    ],
+    "left_shoulder_parent": [
+      "左肩P",
+      "左肩Ｐ"
+    ],
+    "left_shoulder": [
+      "左肩"
+    ],
+    "left_arm": [
+      "左腕"
+    ],
+    "left_elbow": [
+      "左ひじ"
+    ],
+    "left_wrist": [
+      "左手首"
+    ],
+    "right_shoulder_parent": [
+      "右肩P",
+      "右肩Ｐ"
+    ],
+    "right_shoulder": [
+      "右肩"
+    ],
+    "right_arm": [
+      "右腕"
+    ],
+    "right_elbow": [
+      "右ひじ"
+    ],
+    "right_wrist": [
+      "右手首"
+    ],
+    "left_leg": [
+      "左足"
+    ],
+    "left_knee": [
+      "左ひざ"
+    ],
+    "left_foot_ik_parent": [
+      "左足IK親",
+      "左足ＩＫ親",
+      "左足IKParent"
+    ],
+    "left_foot_ik": [
+      "左足ＩＫ",
+      "左足IK"
+    ],
+    "right_leg": [
+      "右足"
+    ],
+    "right_knee": [
+      "右ひざ"
+    ],
+    "right_foot_ik_parent": [
+      "右足IK親",
+      "右足ＩＫ親",
+      "右足IKParent"
+    ],
+    "right_foot_ik": [
+      "右足ＩＫ",
+      "右足IK"
+    ]
+  },
+  "parent_chains": {
+    "torso_parent_world": [
+      "all_parent",
+      "center",
+      "groove",
+      "waist"
+    ],
+    "lower_body_world": [
+      "all_parent",
+      "center",
+      "groove",
+      "waist",
+      "lower_body"
+    ],
+    "upper_body_world": [
+      "all_parent",
+      "center",
+      "groove",
+      "waist",
+      "upper_body",
+      "upper_body_2"
+    ]
+  },
+  "geometry": {
+    "pelvis_reference": [
+      0.0,
+      9.0,
+      0.0
+    ],
+    "chest_offset": [
+      0.0,
+      4.0,
+      0.0
+    ],
+    "shoulder_F_offset": [
+      -2.2,
+      3.0,
+      0.0
+    ],
+    "upper_arm_F": [
+      -3.0,
+      0.0,
+      0.0
+    ],
+    "forearm_F": [
+      -2.8,
+      0.0,
+      0.0
+    ],
+    "shoulder_B_offset": [
+      2.2,
+      3.0,
+      0.0
+    ],
+    "upper_arm_B": [
+      3.0,
+      0.0,
+      0.0
+    ],
+    "forearm_B": [
+      2.8,
+      0.0,
+      0.0
+    ],
+    "hip_F_offset": [
+      -1.0,
+      0.0,
+      0.0
+    ],
+    "thigh_F": [
+      0.0,
+      -4.0,
+      0.0
+    ],
+    "shin_F": [
+      0.0,
+      -4.0,
+      0.0
+    ],
+    "hip_B_offset": [
+      1.0,
+      0.0,
+      0.0
+    ],
+    "thigh_B": [
+      0.0,
+      -4.0,
+      0.0
+    ],
+    "shin_B": [
+      0.0,
+      -4.0,
+      0.0
+    ]
+  },
+  "leg_ik": {
+    "enabled": true,
+    "left_bend_hint": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "right_bend_hint": [
+      0.0,
+      0.0,
+      -1.0
+    ],
+    "confidence": 0.5
+  },
+  "confidence": {
+    "body": 0.7,
+    "arms": 0.65,
+    "legs_fk": 0.55,
+    "legs_ik": 0.5
+  }
+}

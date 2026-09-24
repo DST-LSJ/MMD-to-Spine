@@ -1,0 +1,74 @@
+{
+  "version": 1,
+  "enabled": true,
+  "pose_policy": "preserve_existing",
+  "depth_source": "canonical_rig_approximation",
+  "source_rig_profile": "source_rig_profile.json",
+  "sampling_hz": 30,
+  "depth_epsilon_body_height": 0.015,
+  "body_height": 16.0,
+  "min_switch_duration_seconds": 0.0666667,
+  "tie_break": "previous_then_setup",
+  "preserve_unmanaged_relative_order": true,
+  "missing_depth_policy": "keep_previous_and_warn",
+  "single_slot_conflict_policy": "warn_keep_stable",
+  "group_policy": "nearest_registered_ancestor",
+  "limb_group_mode": "whole_limb_atomic_with_internal_order",
+  "pose_adaptation_enabled": false,
+  "manual_overrides_file": "draw_order_overrides.json",
+  "debug_enabled": true,
+  "overlap_margin_px": 18.0,
+  "body_reference": {
+    "slot": "body",
+    "bone": "body",
+    "center_offset": [0.0, 55.0],
+    "width": 190.0,
+    "height": 250.0
+  },
+  "groups": {
+    "arm_B": {
+      "anchor_bone": "armB",
+      "segment": "upper_arm_B",
+      "internal_order": ["armB"]
+    },
+    "hand_B": {
+      "anchor_bone": "handB",
+      "segment": "forearm_hand_B",
+      "internal_order": ["handB", "weaponSubB", "weaponMainB"]
+    },
+    "arm_F": {
+      "anchor_bone": "armF",
+      "segment": "whole_arm_F",
+      "internal_order": ["armF", "weaponSubF", "weaponMainF", "handF"]
+    },
+    "leg_B": {
+      "anchor_bone": "thighB",
+      "segment": "whole_leg_B",
+      "internal_order": ["legB", "thighB"]
+    },
+    "leg_F": {
+      "anchor_bone": "thighF",
+      "segment": "whole_leg_F",
+      "internal_order": ["legF", "thighF"]
+    }
+  },
+  "static_groups": ["arm_B", "arm_F"],
+  "slot_owner_overrides": {},
+  "compare_pairs": [
+    ["hand_B", "arm_F"],
+    ["leg_F", "leg_B"]
+  ],
+  "body_occlusion": {
+    "groups": ["hand_B"],
+    "slots": ["skirtB", "body", "skirtF", "head", "face"]
+  },
+  "hard_constraints": [
+    {"before": "group:arm_B", "after": "slot:skirtB"},
+    {"before": "slot:skirtB", "after": "group:leg_B"},
+    {"before": "slot:skirtB", "after": "group:leg_F"},
+    {"before": "group:leg_B", "after": "slot:skirtF"},
+    {"before": "group:leg_F", "after": "slot:skirtF"},
+    {"before": "slot:skirtF", "after": "group:arm_F"},
+    {"before": "slot:face", "after": "group:arm_F"}
+  ]
+}

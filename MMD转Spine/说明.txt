@@ -1,0 +1,9 @@
+2026-9-23:
+
+功能：将3D的MMD动画数据转换成2D的spine骨骼动画
+开发：Codex+ChatGPT6
+脚本：Python 3.10 或以上版本
+spine版本：4.3
+人物素材：pcr霞
+相关专栏：https://www.bilibili.com/opus/801111052800491733
+作者：美神自由梦
